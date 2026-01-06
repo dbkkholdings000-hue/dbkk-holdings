@@ -1,6 +1,23 @@
-<h1>Galeri</h1>
-<p>Aktiviti & dokumentasi DBKK Holdings.</p>
-  <!-- CSS -->
-<link rel="stylesheet" href="assets/css/style.css">
+/* GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
 
+.gallery-item {
+  overflow: hidden;
+  border-radius: 6px;
+}
 
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
