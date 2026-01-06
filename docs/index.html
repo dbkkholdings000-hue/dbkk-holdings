@@ -2,11 +2,7 @@
 <html lang="ms">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>DBKK HOLDINGS SDN. BHD.</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -39,42 +35,75 @@
     </nav>
   </div>
 </header>
+
+<!-- HERO SLIDER -->
 <section class="hero-slider">
-  <div class="slides">
-    <div class="slide active" style="background-image: url('assets/images/banner1.jpg');">
-      <div class="slide-content">
-        <h1>Pengurusan Parkir Bandaraya</h1>
-        <p>Solusi parkir pintar untuk Kota Kinabalu</p>
-      </div>
+
+  <div class="slide active" style="background-image:url('assets/images/banner1.jpg');">
+    <div class="overlay"></div>
+    <div class="slide-content">
+      <h1>Pengurusan Parkir Bandar</h1>
+      <p>🚗 Sistem parkir moden & teratur di Kota Kinabalu</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image:url('assets/images/banner2.jpg');">
+    <div class="overlay"></div>
+    <div class="slide-content">
+      <h1>Pengurusan Bas Awam</h1>
+      <p>🚌 Perkhidmatan bas ke daerah-daerah Sabah</p>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image:url('assets/images/banner3.jpg');">
+    <div class="overlay"></div>
+    <div class="slide-content">
+      <h1>Mobiliti Bandar Pintar</h1>
+      <p>🌱 Ke arah bandar hijau & lestari</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ICON ANIMATION SECTION -->
+<section class="services">
+  <div class="container">
+    <div class="service-card parking">
+      <div class="icon">🚗</div>
+      <h3>Pengurusan Parkir</h3>
+      <p>Sistem parkir bandar yang efisien dan selamat.</p>
     </div>
 
-    <div class="slide" style="background-image: url('assets/images/banner2.jpg');">
-      <div class="slide-content">
-        <h1>Perkhidmatan Pengangkutan Bas</h1>
-        <p>Menghubungkan bandar ke daerah</p>
-      </div>
-    </div>
-
-    <div class="slide" style="background-image: url('assets/images/banner3.jpg');">
-      <div class="slide-content">
-        <h1>DBKK HOLDINGS SDN. BHD.</h1>
-        <p>Komited kepada kemudahan awam moden</p>
-      </div>
+    <div class="service-card bus">
+      <div class="icon">🚌</div>
+      <h3>Pengurusan Bas</h3>
+      <p>Bas awam menghubungkan bandar & daerah.</p>
     </div>
   </div>
 </section>
 
-<!-- MAIN CONTENT -->
-<main class="main-content container">
-  <h1>Selamat Datang ke Laman Rasmi</h1>
-  <h2>DBKK HOLDINGS SDN. BHD.</h2>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 DBKK HOLDINGS SDN. BHD. Hak Cipta Terpelihara.</p>
+</footer>
 
-  <p>
-    DBKK HOLDINGS SDN. BHD. merupakan sebuah entiti korporat yang
-    menyediakan perkhidmatan sokongan bagi menyokong
-    pengurusan dan pembangunan strategik Dewan Bandaraya Kota Kinabalu.
-  </p>
-</main>
+<!-- AUTO SLIDER SCRIPT -->
+<script>
+  let slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 5000);
+</script>
 
 </body>
 </html>
